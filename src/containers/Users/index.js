@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {useHistory} from 'react-router-dom'
 
 import axios from "axios";
 import ppl from "../../assets/ppl.svg";
@@ -16,6 +17,7 @@ import {
 
 function Users() {
   const [users, setUsers] = useState([]);
+  const history = useHistory()
 
   useEffect(() => {
     async function fetchUsers() {
@@ -33,23 +35,27 @@ function Users() {
     setUsers(newUsers);
   }
 
+  function goBackPage(){
+    history.push('/')
+  }
+
   return (
     <Container>
       <Image alt="logo-img" src={ppl} />
       <ContainerSec>
-        <H1>Usuarios</H1>
+        <H1>Usuários</H1>
 
         <ul>
           {users.map((user) => (
             <User key={user.id}>
               {user.name} - {user.age}
               <button onClick={() => deleteUser(user.id)}>
-                <img src={Trash} alt="lata-lixo" />
+                <img src={Trash} alt="trash-box" />
               </button>
             </User>
           ))}
         </ul>
-        <Button>
+        <Button onClick={goBackPage}>
           <img alt="arrow" src={Arrow} /> Voltar
         </Button>
       </ContainerSec>

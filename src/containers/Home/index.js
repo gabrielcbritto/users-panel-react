@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import {useHistory} from 'react-router-dom'
+
 
 import axios from "axios";
 import People from "../../assets/people.svg";
@@ -18,13 +20,15 @@ function App() {
   const [users, setUsers] = useState([]);
   const inputName = useRef();
   const inputAge = useRef();
+  const history = useHistory()
 
   async function addNewUser() {
     const { data: newUser } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value,
       age: inputAge.current.value,
     });
-    setUsers([...users, newUser]);   
+    setUsers([...users, newUser]);
+    history.push('/usuarios')   
   }
 
   return (
