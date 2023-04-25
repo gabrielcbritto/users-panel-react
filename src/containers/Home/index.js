@@ -8,13 +8,14 @@ import Arrow from "../../assets/arrow.svg";
 
 import {
   Container,
-  H1,
   Image,
   ContainerSec,
   InputLabel,
   Input,
   Button,
 } from "./styles";
+
+import H1 from "../../components/Title"
 
 function App() {
   const [users, setUsers] = useState([]);
