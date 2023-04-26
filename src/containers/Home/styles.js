@@ -25,6 +25,7 @@ export const InputLabel = styled.p`
   color: #eeeeee;
   margin-left: 20px;
   margin-bottom: 5px;
+ 
 `;
 export const Input = styled.input`
   background: rgba(255, 255, 255, 0.25);
@@ -45,36 +46,4 @@ export const Input = styled.input`
   line-height: 28px;
 
   color: #ffffff;
-`;
-export const Button = styled.button`
-  width: 342px;
-  height: 74px;
-  margin-top: 130px;
-
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 14px;
-
-  border: none;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 28px;
-
-  color: #ffffff;
-
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
 `;

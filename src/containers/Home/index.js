@@ -12,11 +12,11 @@ import {
   Container,
   InputLabel,
   Input,
-  Button,
 } from "./styles";
 
 import H1 from "../../components/Title"
 import ContainerItens from "../../components/ContainerItens"
+import  Button  from "../../components/Button"
 
 function App() {
   const [users, setUsers] = useState([]);
