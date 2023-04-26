@@ -6,16 +6,17 @@ import axios from "axios";
 import People from "../../assets/people.svg";
 import Arrow from "../../assets/arrow.svg";
 
+
 import {
-  Container,
   Image,
-  ContainerSec,
+  Container,
   InputLabel,
   Input,
   Button,
 } from "./styles";
 
 import H1 from "../../components/Title"
+import ContainerItens from "../../components/ContainerItens"
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -35,7 +36,7 @@ function App() {
   return (
     <Container>
       <Image alt="logo-img" src={People} />
-      <ContainerSec>
+      <ContainerItens>
         <H1>Olá!</H1>
 
         <InputLabel>Nome</InputLabel>
@@ -47,7 +48,7 @@ function App() {
         <Button onClick={addNewUser}>
           Cadastrar <img alt="arrow" src={Arrow} />
         </Button>
-      </ContainerSec>
+      </ContainerItens>
     </Container>
   );
 }

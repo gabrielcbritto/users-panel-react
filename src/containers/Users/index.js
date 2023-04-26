@@ -7,14 +7,14 @@ import Arrow from "../../assets/arrow.svg";
 import Trash from "../../assets/trash.svg";
 
 import {
-  Container,
   Image,
-  ContainerSec,
+  Container,
   Button,
   User,
 } from "./styles";
 
 import H1 from "../../components/Title"
+import ContainerItens from "../../components/ContainerItens"
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -43,7 +43,7 @@ function Users() {
   return (
     <Container>
       <Image alt="logo-img" src={ppl} />
-      <ContainerSec>
+      <ContainerItens BlurOn="{True}">
         <H1>Usuários</H1>
 
         <ul>
@@ -59,7 +59,7 @@ function Users() {
         <Button onClick={goBackPage}>
           <img alt="arrow" src={Arrow} /> Voltar
         </Button>
-      </ContainerSec>
+      </ContainerItens>
     </Container>
   );
 }
